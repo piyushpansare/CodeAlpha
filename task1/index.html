@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Image Gallery</h1>
+    </header>
+    
+    <div class="gallery">
+        <div class="thumbnails">
+            <img src="images 1.jpeg" alt="images 1" class="thumbnail" onclick="openModal('images 1.jpeg')">
+            <img src="image 2.jpeg" alt="Image 2" class="thumbnail" onclick="openModal('image 2.jpeg')">
+            <img src="image 3.jpeg" alt="Image 3" class="thumbnail" onclick="openModal('image 3.jpeg')">
+            <img src="image 4.jpeg" alt="Image 4" class="thumbnail" onclick="openModal('image 4.jpeg')">
+            <img src="image 5.jpeg" alt="Image 5" class="thumbnail" onclick="openModal('image 5.jpeg')">
+            <img src="image 6.jpeg" alt="Image 6" class="thumbnail" onclick="openModal('image 6.jpeg')">
+            <img src="image 7.jpeg" alt="Image 7" class="thumbnail" onclick="openModal('image 7.jpeg')">
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal(event)">×</span>
+        <img class="modal-content" id="modalImage">
+        <div class="caption" id="caption"></div>
+        <button class="prev" onclick="changeimage(-1)">❮</button>
+        <button class="next" onclick="changeimage(1)">❯</button>
+    </div>
+
+    <script src="cal.js"></script>
+</body>
+</html>
